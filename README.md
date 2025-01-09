@@ -20,10 +20,10 @@
     
 ## <a id="title2">2. Описание HTML-шаблонов для приложения Catalog в `media/html_patterns/`</a>
 1. Файл ***media/html_patterns/Home.html***: содержит HTML-шаблон для страницы "Главная", согласно прототипа из ТЗ:
-![Прототип для страницы "Главная"](media/html_patterns/Home_page.png)
+![Прототип для страницы "Главная"](static/html_patterns/Home_page.png)
 
 2. Файл ***media/html_patterns/Contacts.html***: содержит HTML-шаблон для страницы "Контакты", согласно прототипа из ТЗ:
-![Прототип для страницы "Контакты"](media/html_patterns/Contacts_page.png)
+![Прототип для страницы "Контакты"](static/html_patterns/Contacts_page.png)
 
 
    
