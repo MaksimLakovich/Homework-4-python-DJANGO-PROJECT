@@ -80,12 +80,13 @@
 ## <a id="title6">6. Описание кастомных команд (management/commands) приложения Catalog в `сatalog/management/commands/`</a>
 
 1) Для модели *"Category"* созданы следующие кастомные команды:
-   - `create_category_fixture` - кастомная команда для СОЗДАНИЯ фикстуры для модели Category;
+   - `create_category_fixture.py` - кастомная команда для СОЗДАНИЯ фикстуры для модели Category;
+   - `add_categories.py` - кастомная команда для ЗАГРУЗКИ данных в БД из фикстуры.
 
 
 2) Для модели *"Product"* созданы следующие кастомные команды:
-   - `create_product_fixture` - кастомная команда для СОЗДАНИЯ фикстуры для модели Product;
-
+   - `create_product_fixture.py` - кастомная команда для СОЗДАНИЯ фикстуры для модели Product;
+   - `add_products.py` - кастомная команда для ЗАГРУЗКИ данных в БД из фикстуры.
 
 
 ## <a id="title7">7. Установка проекта</a>
