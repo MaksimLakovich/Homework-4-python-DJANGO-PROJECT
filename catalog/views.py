@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from catalog.models import Product
+from catalog.models import ContactsData, Product
 
 
 def home_page(request):
@@ -24,4 +24,6 @@ def contacts_page(request):
         # Если метод запроса POST, контроллер получает данные из формы (name) и возвращает простой HTTP-ответ.
         return HttpResponse(f"Спасибо, {name}! Ваше сообщение успешно отправлено")
     # Если метод запроса — GET, контроллер рендерит шаблон contacts.html
-    return render(request, "catalog/contacts.html")
+    # Сразу получаю контактные данные из БД, чтоб потом их использовать при рендере шаблона страницы-html
+    contacts_data = ContactsData.objects.all()
+    return render(request, "catalog/contacts.html", {"contacts_data": contacts_data})

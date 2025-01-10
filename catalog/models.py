@@ -36,3 +36,20 @@ class Product(models.Model):
         verbose_name_plural = "Товары"
         ordering = ["product_name"]
         db_table = "catalog_products"
+
+
+class ContactsData(models.Model):
+    """Модель ContactsData для хранения контактных данных интернет-магазина."""
+    country = models.CharField(max_length=100, verbose_name="Страна", help_text="Введите страну регистрации магазина")
+    tax_id = models.CharField(max_length=20, verbose_name="ИНН", help_text="Введите ИНН магазина")
+    address = models.TextField(verbose_name="Адрес", help_text="Введите юридический адрес магазина")
+
+    def __str__(self):
+        """Метод определяет строковое представление объекта. Полезно для отображения объектов в админке/консоли."""
+        return f"{self.country}, {self.address}"
+
+    class Meta:
+        verbose_name = "Контакт"
+        verbose_name_plural = "Контакты"
+        ordering = ["country"]
+        db_table = "catalog_contacts_data"
