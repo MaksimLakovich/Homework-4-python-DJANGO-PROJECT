@@ -5,7 +5,7 @@ from django.core.management import call_command
 
 
 class Command(BaseCommand):
-    help = "Экспорт данных Category в файл фикстуры."
+    help = "Кастомная команда для экспорта данных Category в файл фикстуры."
 
     def handle(self, *args, **kwargs):
         # Указываю путь для сохранения фикстуры
