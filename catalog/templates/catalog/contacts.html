@@ -15,7 +15,7 @@
     <h5 class="my-0 mr-md-auto font-weight-normal">Skystore</h5>
     <nav class="ms-5">
         <a class="p-2 btn btn-outline-primary" href="/">Каталог</a>
-        <a class="p-2 btn btn-outline-primary" href="/contacts/">Контакты</a>
+        <a class="p-2 btn btn-outline-primary" href="/catalog/contacts/">Контакты</a>
     </nav>
 </div>
 <!--Блок с базовым описанием сути страницы-->
@@ -30,18 +30,20 @@
             <div class="card mb-4 box-shadow">
                 <div class="card-body">
                     <table class="table table-striped">
+                        {% for contact in contacts_data %}
                         <tr>
                             <td class="w-25">Страна</td>
-                            <td>USA</td>
+                            <td>{{ contact.country }}</td>
                         </tr>
                         <tr>
                             <td class="w-25">ИНН</td>
-                            <td>91-1144442</td>
+                            <td>{{ contact.tax_id }}</td>
                         </tr>
                         <tr>
                             <td class="w-25">Адрес</td>
-                            <td>Redmond,WA,98052-6399</td>
+                            <td>{{ contact.address }}</td>
                         </tr>
+                        {% endfor %}
                     </table>
                 </div>
             </div>
